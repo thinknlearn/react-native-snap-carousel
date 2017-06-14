@@ -4,9 +4,34 @@ import Carousel from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from 'example/src/styles/SliderEntry.style';
 import SliderEntry from 'example/src/components/SliderEntry';
 import styles from 'example/src/styles/index.style';
-import { ENTRIES1, ENTRIES2 } from 'example/src/static/entries';
+import { ENTRIES1, ENTRIES2, ENTRIES3, ENTRIES4 } from 'example/src/static/entries';
 
 export default class example extends Component {
+
+    constructor (props) {
+        super(props)
+
+        this.state = {
+            entries: ENTRIES3
+        }
+    }
+
+    componentWillMount () {
+        setInterval( 
+            () => {
+                if ( Math.random() > 0.5 ) {
+                    this.setState( {
+                        entries: ENTRIES4
+                    })
+                } else {
+                    this.setState( {
+                        entries: ENTRIES3
+                    })
+                }
+            },
+            5000
+        )
+    }
 
     getSlides (entries) {
         if (!entries) {
@@ -16,7 +41,7 @@ export default class example extends Component {
         return entries.map((entry, index) => {
             return (
                 <SliderEntry
-                  key={`carousel-entry-${index}`}
+                key={`carousel-entry-${index}`}
                   even={(index + 1) % 2 === 0}
                   {...entry}
                 />
@@ -66,6 +91,26 @@ export default class example extends Component {
         );
     }
 
+    get example3 () {
+        return (
+            <Carousel
+              sliderWidth={sliderWidth}
+              itemWidth={itemWidth}
+              firstItem={1}
+              inactiveSlideScale={0.94}
+              inactiveSlideOpacity={0.6}
+              enableMomentum={false}
+              containerCustomStyle={styles.slider}
+              contentContainerCustomStyle={styles.sliderContainer}
+              showsHorizontalScrollIndicator={false}
+              snapOnAndroid={true}
+              removeClippedSubviews={false}
+            >
+                { this.getSlides( this.state.entries ) }
+            </Carousel>
+        );
+    }
+
     render () {
         return (
             <View style={styles.container}>
@@ -89,6 +134,9 @@ export default class example extends Component {
                     <Text style={styles.title}>Example 2</Text>
                     <Text style={styles.subtitle}>Momentum | Autoplay</Text>
                     { this.example2 }
+                    <Text style={styles.title}>Example 3</Text>
+                    <Text style={styles.subtitle}>No momentum | Scale | Opacity | Dynamic Slides</Text>
+                    { this.example3 }
                 </ScrollView>
             </View>
         );

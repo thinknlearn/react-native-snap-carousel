@@ -63,3 +63,45 @@ export const ENTRIES2 = [
         illustration: 'http://i.imgur.com/l49aYS3l.jpg'
     }
 ];
+
+export const ENTRIES3 = [
+    {
+        title: 'Beautiful and dramatic Antelope Canyon',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
+        illustration: 'http://i.imgur.com/UYiroysl.jpg'
+    },
+    {
+        title: 'Earlier this morning, NYC',
+        subtitle: 'Lorem ipsum dolor sit amet',
+        illustration: 'http://i.imgur.com/UPrs1EWl.jpg'
+    },
+    {
+        title: 'White Pocket Sunset',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
+        illustration: 'http://i.imgur.com/MABUbpDl.jpg'
+    }
+];
+
+export const ENTRIES4 = [
+    {
+        title: 'Beautiful and dramatic Antelope Canyon',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
+        illustration: 'http://i.imgur.com/UYiroysl.jpg'
+    },
+    {
+        title: 'Earlier this morning, NYC',
+        subtitle: 'Lorem ipsum dolor sit amet',
+        illustration: 'http://i.imgur.com/UPrs1EWl.jpg'
+    },
+    {
+        title: 'White Pocket Sunset',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
+        illustration: 'http://i.imgur.com/MABUbpDl.jpg'
+    },
+    {
+        title: 'Acrocorinth, Greece',
+        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
+        illustration: 'http://i.imgur.com/KZsmUi2l.jpg'
+    }
+];
+

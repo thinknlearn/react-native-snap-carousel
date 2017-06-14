@@ -2383,9 +2383,8 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-snap-carousel@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-snap-carousel/-/react-native-snap-carousel-2.2.0.tgz#2e735e190140cd89f4a3435b283e0fc2a5e207a3"
+"react-native-snap-carousel@file:../":
+  version "2.2.2"
   dependencies:
     lodash.debounce "4.0.8"
     lodash.throttle "4.1.1"
